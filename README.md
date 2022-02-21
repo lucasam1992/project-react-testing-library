@@ -51,16 +51,6 @@ O projeto consiste em gerar testes em uma aplicação em React já criada e conf
    * Repare que, na tabela, 4 casos de uso constam como `Killed` e 3 constam como `Survived`. Isso significa que **3 casos de uso não foram contemplados pelos seus testes**! Os casos de uso gerados, que geraram os erros, aparecem acima. Na linha verde (ao lado de cada símbolo `+`), o Stryker exibe o erro que ele injetou no teste para testar um caso de uso. Esse erro não foi coberto pelo seu teste.
     
 
-# Requisitos do projeto
-
-A seguir estão listados todos os requisitos do projeto. Lembre-se que para a avaliação utilizaremos testes por mutação, então cada requisito só será aceito se os testes tiverem comportamento adequado tanto na aplicação original como na modificada.
-
-⚠ PULL REQUESTS COM ISSUES NO LINTER NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO! ⚠
-
-Todos os arquivos de teste que vocês usarão **já estão previamente criados e novos arquivos não devem ser criados**. Como exemplo colocamos um teste dentro do arquivo `src/tests/App.test.js`. Além disso, **cada requisito se refere a um arquivo da aplicação da Pokédex**. Obter aprovação num requisito significa que todos os casos de erro daquele arquivo estão cobertos, ou seja, todos os mutantes criados naquele arquivo pelo avaliador foram mortos. Nos subitens de cada requisito detalhamos o que é necessário fazer para obter a aprovação neles.
-
-É importante tentar realizar todos os testes de cada requisito a seguir, pois eles são relevantes para os cenários apresentados e vão colocar em prática os conhecimentos de RTL que você adquiriu até aqui! :) Observe que nem todos os testes são contemplados em sua totalidade pelo avaliador, mas a sua implementação garante a aprovação no requisito.
-
 ## Lista de requisitos
 
 ### 1. Teste o componente `<App.js />`
@@ -83,10 +73,6 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
   - Teste se a aplicação é redirecionada para a página `Not Found` ao entrar em uma URL desconhecida.
 
-  **O que será verificado:**
-  
-  - Será avaliado se o arquivo teste `App.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
-
 ### 2. Teste o componente `<About.js /.`
 
   - Teste se a página contém as informações sobre a Pokédex.
@@ -97,10 +83,6 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
   - Teste se a página contém a seguinte imagem de uma Pokédex: `https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png`.
 
-  **O que será verificado:**
-    
-  - Será avaliado se o arquivo teste `About.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
-
 ### 3. Teste o componente `<FavoritePokemons.js />`
 
   - Teste se é exibido na tela a mensagem `No favorite pokemon found`, se a pessoa não tiver pokémons favoritos.
@@ -109,19 +91,11 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
   - Teste se **nenhum** card de pokémon é exibido, se ele não estiver favoritado.
 
-  **O que será verificado:**
-
-  - Será avaliado se o arquivo teste `FavoritePokemons.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
-
 ### 4. Teste o componente `<NotFound.js />`
 
   - Teste se página contém um heading `h2` com o texto `Page requested not found 😭`;
 
   - Teste se página mostra a imagem `https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif`.
-
-  **O que será verificado:**
-
-  - Será avaliado se o arquivo teste `NotFound.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
 
 ### 5. Teste o componente `<Pokedex.js />`
 
@@ -161,10 +135,6 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
   - O botão de `Próximo pokémon` deve ser desabilitado quando a lista filtrada de Pokémons tiver um só pokémon.
 
-  **O que será verificado:**
-
-  - Será avaliado se o arquivo teste `Pokedex.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
-
 ### 6. Teste o componente `<Pokemon.js />`
 
   - Teste se é renderizado um card com as informações de determinado pokémon.
@@ -188,10 +158,6 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
     - O ícone deve ser uma imagem com o atributo `src` contendo o caminho `/star-icon.svg`;
 
     - A imagem deve ter o atributo `alt` igual a `<pokemon> is marked as favorite`, onde `<pokemon>` é o nome do Pokémon exibido.
-
-    **O que será verificado:**
-
-    - Será avaliado se o arquivo teste `Pokemon.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
 
 ### 7. Teste o componente `<PokemonDetails.js />`
 
@@ -224,64 +190,6 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
     - Cliques alternados no `checkbox` devem adicionar e remover respectivamente o Pokémon da lista de favoritos;
 
     - O `label` do `checkbox` deve conter o texto `Pokémon favoritado?`;
-
-    **O que será verificado:**
-
-    - Será avaliado se o arquivo teste `PokemonDetails.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
-
-## Quer fazer mais? Temos algumas sugestões!
-
-O que temos a seguir não são requisitos bônus - são ideias para você se aprofundar mais no projeto e **aprender mais!** Que tal trabalhar neles? Começamos com algo bem direto:
-
-  - A cobertura de testes deve ser 100%
-
-    - Para ver a cobertura de testes, execute no terminal o comando `npm run test-coverage`.
-
-Além disso, a Pokédex é uma aplicação estática, com seus dados pré-definidos. Utilizando a [PokéAPI](https://pokeapi.co/), é possível deixá-la mais dinâmica e realista.
-
-Se quiser implemente os requisitos propostos a seguir e escreva testes para eles. Tente manter sempre a cobertura de testes em 100%, garantindo assim que não há código ou fluxos lógicos não testados. Para um desafio adicional, tente utilizar TDD - escreva os testes à medida que for implementando os requisitos.
-
-  - Adicione uma rota para exibir uma lista de localizações
-
-    - A URL da rota deve ser `/locations`;
-
-    - A página deve exibir uma lista com as localizações retornadas pela PokéAPI. Você pode ler [aqui](https://pokeapi.co/docs/v2#resource-lists-section) e [aqui](https://pokeapi.co/docs/v2#locations-section) como utilizar a PokéAPI para buscar uma lista de localizações.
-
-  - Adicione na barra de navegação um link para a lista de localizações
-
-    - O link deve conter o texto `Locations`;
-
-    - Ao clicar no link, a página com a lista de localizações deve ser exibida;
-
-  - Adicione botões de paginação na lista de localizações.
-
-  Por default, os _endpoints_ da PokéAPI retornam no máximo 20 resultados. Utilizando os parâmetros `limit` e `offset`, você pode especificar qual página deseja buscar e qual seu tamanho. Veja [aqui](https://pokeapi.co/docs/v2#resource-lists-section) como utilizar estes parâmetros.
-
-    - Adicone dois botões "Anterior" e "Próxima" que permitam navegar entre as página da lista de localizações;
-
-    - Na primeira página, o botão "Anterior" deve ser desabilitado. Da mesma forma, ao alcançar a última página, o botão "Próximo" deve ser desabilitado;
-
-  - Adiciona uma rota para exibir uma lista de gerações.
-
-    - A URL da rota deve ser `/generations`;
-
-    - A página deve exibir uma lista com as gerações retornadas pela PokéAPI. Você pode ler [aqui](https://pokeapi.co/docs/v2#resource-lists-section) e [aqui](https://pokeapi.co/docs/v2#generations) como utilizar a PokéAPI para buscar uma lista de gerações.
-
-  - Adicione na barra de navegação um link para a lista de gerações
-
-    - O link deve conter o texto `Generations`;
-
-    - Ao clicar no link, a página com a lista de gerações deve ser exibida.
-
-  - Adicione uma rota para exibir informações sobre uma geração
-
-    - A URL da rota deve ser `/generations/<id>`, onde `<id>` é o id da geração exibida;
-
-    - A página deve exibir, após buscar na PokéAPI, o nome da geração e uma lista com os nomes dos pokémons introduzidos nesta geração.
-
-  - Adicione a cada geração na lista de gerações um link para a página de detalhes desta geração
-
-    - Ao clicar no link, a página com informações sobre a geração clicada deve ser exibida.
 
 # Autor
  - Lucas Machado
