@@ -24,10 +24,10 @@ O projeto consiste em gerar testes em uma aplicação em React já criada e conf
 
 # Rodando o Projeto Localmente:
 
-1° `git clone https://github.com/lucasam1992/project-react-testing-library.git` - Clone o repositório para sua máquina
-2° `cd sd-010-a-project-react-testing-library` - Entre na pasta do repositório clonado
-3° `npm install` - Instale as dependências
-4° `npm run test-coverage` - Para ver a cobertura de testes
+1° `git clone https://github.com/lucasam1992/project-react-testing-library.git` - Clone o repositório para sua máquina <br />
+2° `cd sd-010-a-project-react-testing-library` - Entre na pasta do repositório clonado <br />
+3° `npm install` - Instale as dependências <br />
+4° `npm run test-coverage` - Para ver a cobertura de testes <br />
 
 ## Testes
 
