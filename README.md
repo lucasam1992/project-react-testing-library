@@ -33,24 +33,6 @@ O projeto consiste em gerar testes em uma aplicação em React já criada e conf
 
   - Haverá uma pasta chamada `./stryker` com diversos arquivos `nomeArquivo.conf.json`. Cada um deles é a configuração do avaliador para um requisito e ela **não deve ser alterada**. Quando você completar os testes unitarios de um arquivo, rode o comando `npx stryker run ./stryker/nomeDoArquivo.conf.json` para testar aquele arquivo individualmente.
 
-   - Por exemplo:
-    - Passo 1: _"Acabei de fazer os testes unitários do arquivo `Pokedex.test.js`!"_
-    - Passo 2: _"Vou rodar os meus testes para ver se eles estão todos passando!"_
-    - Passo 3: _"Agora vou rodar o comando para o requisito com `npx stryker run ./stryker/Pokedex.conf.json`!"_
-    * Com o comando acima ele vai executar o stryker e verificar se os seus testes unitários estão corretos.
-
-  - Quando o comando `npx stryker run ./stryker/PokemonDetails.conf.json` for executado, com todos os testes passando, o avaliador apresentará uma saída semelhante à abaixo.
-
-
-    ![image](testepassando.png)
-    
-
-   Uma falha ocorre quando os testes unitários não cobrem 100% de caso de uso gerados pelo Stryker. Nesse caso, algo semelhante à imagem abaixo aparecerá.
-    ![image](testefalhando.png)
-    
-   * Repare que, na tabela, 4 casos de uso constam como `Killed` e 3 constam como `Survived`. Isso significa que **3 casos de uso não foram contemplados pelos seus testes**! Os casos de uso gerados, que geraram os erros, aparecem acima. Na linha verde (ao lado de cada símbolo `+`), o Stryker exibe o erro que ele injetou no teste para testar um caso de uso. Esse erro não foi coberto pelo seu teste.
-    
-
 ## Lista de requisitos
 
 ### 1. Teste o componente `<App.js />`
