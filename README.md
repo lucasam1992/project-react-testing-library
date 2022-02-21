@@ -29,7 +29,7 @@ O projeto consiste em gerar testes em uma aplicação em React já criada e conf
 3° `npm install` - Instale as dependências <br />
 4° `npm run test-coverage` - Para ver a cobertura de testes <br />
 
-## Testes Utilizando 
+## Certificando que Os Testes Estão Passando 
 
   - Haverá uma pasta chamada `./stryker` com diversos arquivos `nomeArquivo.conf.json`. O Stryker serve para fazer uma mutação no projeto, permitindo que você teste seus testes fazendo uma “cópia” do projeto e insere erros para ver se o seus testes irão falhar após a mutação. Quando o teste falha o mutante é morto, logo, o seu teste criado está correto.
 
